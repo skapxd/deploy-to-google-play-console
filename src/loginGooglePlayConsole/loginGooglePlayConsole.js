@@ -19,4 +19,6 @@ module.exports.loginGooglePlayConsole = async (browser) => {
 
   await selectedAccount(page)
   await delay({ seg: 3 })
+
+  return page
 }

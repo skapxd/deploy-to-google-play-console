@@ -8,7 +8,9 @@ const {
 const main = async () => {
   const browser = await chromium.launch({ headless: false })
 
-  await loginGooglePlayConsole(browser)
+  const page = await loginGooglePlayConsole(browser)
+
+  // TODO: Click btn create app and type basic info
 
   await delay({ seg: 60 })
   await browser.close()
