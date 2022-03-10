@@ -1,10 +1,9 @@
-// @ts-check
 require('dotenv').config()
 const { chromium } = require('playwright')
-const { delay } = require('./helpers/delay.js')
+const { delay } = require('./helpers/delay')
 const {
   loginGooglePlayConsole
-} = require('./loginGooglePlayConsole/loginGooglePlayConsole.js')
+} = require('./loginGooglePlayConsole/loginGooglePlayConsole')
 
 const main = async () => {
   const browser = await chromium.launch({ headless: false })
