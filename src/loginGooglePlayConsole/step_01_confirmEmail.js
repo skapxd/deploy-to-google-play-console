@@ -6,7 +6,7 @@ module.exports.confirmEmail = async (page) => {
 
   await textFieldEmail.type(config.credential.email)
 
-  const listOfBtnConfirmEmail = await page.$('[class="VfPpkd-vQzf8d"]')
+  const btnConfirmEmail = await page.$('[class="VfPpkd-vQzf8d"]')
 
-  await listOfBtnConfirmEmail.click()
+  await btnConfirmEmail.click()
 }

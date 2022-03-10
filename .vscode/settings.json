@@ -4,5 +4,6 @@
   "prettier.semi": false,
   "prettier.singleQuote": true,
   "commentTranslate.targetLanguage": "es",
-  "prettier.trailingComma": "none"
+  "prettier.trailingComma": "none",
+  "cSpell.language": "en,es-ES"
 }

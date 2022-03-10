@@ -8,7 +8,7 @@ module.exports.confirmPass = async (page) => {
 
   await textFieldPass.type(config.credential.pass)
 
-  const listBtnConfirmPass = await page.$('[class="VfPpkd-RLmnJb"]')
+  const btnConfirmPass = await page.$('[class="VfPpkd-RLmnJb"]')
 
-  await listBtnConfirmPass.click()
+  await btnConfirmPass.click()
 }
