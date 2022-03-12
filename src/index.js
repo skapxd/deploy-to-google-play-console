@@ -1,10 +1,7 @@
-require('dotenv').config()
-const { chromium } = require('playwright')
-const { delay } = require('./helpers/delay')
-const { loginJira } = require('./loginJira/loginJira')
-// const {
-//   loginGooglePlayConsole
-// } = require('./loginGooglePlayConsole/loginGooglePlayConsole')
+import 'dotenv/config'
+import { chromium } from 'playwright'
+import { delay } from './helpers/delay.js'
+import { loginJira } from './jira/loginJira/loginJira.js'
 
 const main = async () => {
   const browser = await chromium.launch({ headless: false })

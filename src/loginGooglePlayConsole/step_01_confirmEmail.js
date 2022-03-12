@@ -1,7 +1,7 @@
-const { config } = require('../config/config')
+import { config } from '../config/config'
 
 /** @param {import('playwright').Page} page */
-module.exports.confirmEmailGPC = async (page) => {
+export const confirmEmailGPC = async (page) => {
   const textFieldEmail = await page.$('#identifierId')
 
   await textFieldEmail.type(config.credential.googlePlayConsole.email)

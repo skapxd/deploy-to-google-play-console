@@ -1,5 +1,5 @@
 // @ts-check
-module.exports.config = {
+export const config = {
   pages: {
     jira: {
       login:

@@ -1,15 +1,15 @@
 // @ts-check
 
-const { config } = require('../config/config')
-const { delay } = require('../helpers/delay')
-const { confirmEmailJira } = require('./step_01_confirmEmail')
-const { confirmPassJira } = require('./step_02_confirmPass')
+import { config } from '../../config/config.js'
+import { delay } from '../../helpers/delay.js'
+import { confirmEmailJira } from './step_01_confirmEmail.js'
+import { confirmPassJira } from './step_02_confirmPass.js'
 
 /**
  * @param {import('playwright').Browser} browser
  * @return {Promise<import('playwright').Page>}
  * */
-module.exports.loginJira = async (browser) => {
+export const loginJira = async (browser) => {
   const page = await browser.newPage()
   await page.goto(config.pages.jira.login)
 

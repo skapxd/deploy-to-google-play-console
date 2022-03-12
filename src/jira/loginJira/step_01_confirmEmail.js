@@ -1,11 +1,11 @@
-// placeholder="Introducir contraseña"
+// @ts-check
 
-const { config } = require('../config/config')
+import { config } from '../../config/config.js'
 
 /**
  * @param {import("playwright").Page} page
  */
-module.exports.confirmEmailJira = async (page) => {
+export const confirmEmailJira = async (page) => {
   const input = page.locator('[placeholder="Introducir correo"]')
 
   await input.type(config.credential.jira.email)

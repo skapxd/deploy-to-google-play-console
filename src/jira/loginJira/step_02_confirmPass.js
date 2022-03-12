@@ -1,9 +1,9 @@
-const { config } = require('../config/config')
+import { config } from '../../config/config.js'
 
 /**
  * @param {import("playwright").Page} page
  */
-module.exports.confirmPassJira = async (page) => {
+export const confirmPassJira = async (page) => {
   const input = page.locator('[placeholder="Introducir contraseña"]')
   await input.type(config.credential.jira.pass)
 
