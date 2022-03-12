@@ -3,7 +3,7 @@
 const { config } = require('../config/config')
 
 /** @param {import('playwright').Page} page */
-module.exports.confirmPass = async (page) => {
+module.exports.confirmPassGPC = async (page) => {
   const textFieldPass = await page.$('[name="password"]')
 
   await textFieldPass.type(config.credential.googlePlayConsole.pass)

@@ -1,9 +1,9 @@
 // @ts-check
 const { config } = require('../config/config')
 const { delay } = require('../helpers/delay')
-const { confirmEmail } = require('./step_01_confirmEmail')
-const { confirmPass } = require('./step_02_confirmPass')
-const { selectedAccount } = require('./step_03_selectedAccount')
+const { confirmEmailGPC } = require('./step_01_confirmEmail')
+const { confirmPassGPC } = require('./step_02_confirmPass')
+const { selectedAccountGPC } = require('./step_03_selectedAccount')
 
 /** @param {import('playwright').Browser} browser */
 module.exports.loginGooglePlayConsole = async (browser) => {
@@ -11,13 +11,13 @@ module.exports.loginGooglePlayConsole = async (browser) => {
 
   await page.goto(config.pages.googlePlayConsole.login)
 
-  await confirmEmail(page)
+  await confirmEmailGPC(page)
   await delay({ seg: 3 })
 
-  await confirmPass(page)
+  await confirmPassGPC(page)
   await delay({ seg: 3 })
 
-  await selectedAccount(page)
+  await selectedAccountGPC(page)
   await delay({ seg: 3 })
 
   return page
