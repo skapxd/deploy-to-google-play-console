@@ -2,8 +2,8 @@
 
 import { config } from '../../config/config.js'
 import { delay } from '../../helpers/delay.js'
-import { confirmEmailJira } from './step_01_confirmEmail.js'
-import { confirmPassJira } from './step_02_confirmPass.js'
+import { confirmEmailJira } from './step_01_confirmEmailJira.js'
+import { confirmPassJira } from './step_02_confirmPassJira.js'
 
 /**
  * @param {import('playwright').Browser} browser

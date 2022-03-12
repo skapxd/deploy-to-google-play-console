@@ -1,4 +1,4 @@
-import { config } from '../config/config'
+import { config } from '../../config/config.js'
 
 /** @param {import('playwright').Page} page */
 export const confirmEmailGPC = async (page) => {

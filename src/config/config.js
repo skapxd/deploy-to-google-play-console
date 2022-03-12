@@ -2,6 +2,9 @@
 export const config = {
   pages: {
     jira: {
+      appCode: process.env.TASK_JIRA_ID,
+      getPageByCode: (code = '') =>
+        `https://q10soluciones.atlassian.net/browse/${code}`,
       login:
         'https://id.atlassian.com/login?continue=https%3A%2F%2Fid.atlassian.com%2Fstart%3FatlOrigin%3DeyJpIjoiNmQ5YjRjNTE0MTc5NGQ3NGFiZjczNDQzODI2ZjRiOTAiLCJwIjoid2FjLWdsb2JhbGRyb3Bkb3duIn0'
     },

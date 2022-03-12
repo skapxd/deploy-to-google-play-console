@@ -1,6 +1,6 @@
 // @ts-check
 
-import { config } from '../config/config'
+import { config } from '../../config/config'
 
 /** @param {import('playwright').Page} page */
 export const confirmPassGPC = async (page) => {
