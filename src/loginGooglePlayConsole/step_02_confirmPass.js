@@ -6,7 +6,7 @@ const { config } = require('../config/config')
 module.exports.confirmPass = async (page) => {
   const textFieldPass = await page.$('[name="password"]')
 
-  await textFieldPass.type(config.credential.pass)
+  await textFieldPass.type(config.credential.googlePlayConsole.pass)
 
   const btnConfirmPass = await page.$('[class="VfPpkd-RLmnJb"]')
 

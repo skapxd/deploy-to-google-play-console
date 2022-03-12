@@ -9,7 +9,7 @@ const { selectedAccount } = require('./step_03_selectedAccount')
 module.exports.loginGooglePlayConsole = async (browser) => {
   const page = await browser.newPage()
 
-  await page.goto(config.pages.login)
+  await page.goto(config.pages.googlePlayConsole.login)
 
   await confirmEmail(page)
   await delay({ seg: 3 })

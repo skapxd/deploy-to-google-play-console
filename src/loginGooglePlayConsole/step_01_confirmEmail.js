@@ -4,7 +4,7 @@ const { config } = require('../config/config')
 module.exports.confirmEmail = async (page) => {
   const textFieldEmail = await page.$('#identifierId')
 
-  await textFieldEmail.type(config.credential.email)
+  await textFieldEmail.type(config.credential.googlePlayConsole.email)
 
   const btnConfirmEmail = await page.$('[class="VfPpkd-vQzf8d"]')
 
